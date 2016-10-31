@@ -83,6 +83,60 @@ Within each layer, new CSS should be seperated into mutiple files according to i
 
 ### Naming
 
+When it comes to naming our CSS classes, we're going to draw from various popular existing naming conventions. These are [BEM](http://getbem.com), [BEMIT](http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further), and [OOCSS](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces).
+
+A typical classname for a button component and some of its variants would therefore be the following.
+
+
+```
+/*
+1. An example of a base class for a button. Since a button would belong on the component layer, we prefix it with a 'c'.
+2. This would be an element class for the button component, hench the 2 underscores.
+3. An example of a modifier for the button component. This is signified by the 2 dashs. 
+*/
+
+.c-btn {
+	/* [1] */ 
+}
+
+.c-btn__inner {
+	/* [2] */ 
+}
+
+.c-btn--secondary {
+	/* [3] */ 
+}
+```
+
+A basic bootstrap-esq grid system may have the following classes:
+
+```
+/*
+1. A simple container object pattern, so therefore we prefix this with an 'o'.
+2. A typical column class.
+3. A responsive column using the BEMIT naming convention. The '@md' refers to the breakpoint which this styles would become active.
+*/
+
+.o-container {
+	/* [1] */ 	
+}
+
+.o-col-4 {
+	/* [2] */ 
+}
+
+@media (min-width: 925px) {
+	.o-col-4@md {
+		/* [3] */ 		
+	}
+}
+```
+
+
+# Code Documentation
+
+
+
 # Further Reading
 
 WIP
