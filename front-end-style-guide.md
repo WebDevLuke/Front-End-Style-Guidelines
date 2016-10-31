@@ -90,9 +90,9 @@ A typical classname for a button component and some of its variants would theref
 
 ```
 /*
-1. An example of a base class for a button. Since a button would belong on the component layer, we prefix it with a 'c'.
-2. This would be an element class for the button component, hench the 2 underscores.
-3. An example of a modifier for the button component. This is signified by the 2 dashs. 
+[1] An example of a base class for a button. Since a button would belong on the component layer, we prefix it with a 'c'.
+[2] This would be an element class for the button component, hench the 2 underscores.
+[3] An example of a modifier for the button component. This is signified by the 2 dashs. 
 */
 
 .c-btn {
@@ -112,9 +112,9 @@ A basic bootstrap-esq grid system may have the following classes:
 
 ```
 /*
-1. A simple container object pattern, so therefore we prefix this with an 'o'.
-2. A typical column class.
-3. A responsive column using the BEMIT naming convention. The '@md' refers to the breakpoint which this styles would become active.
+[1] A simple container object pattern, so therefore we prefix this with an 'o'.
+[2] A typical column class.
+[3] A responsive column using the BEMIT naming convention. The '@md' refers to the breakpoint which this styles would become active.
 */
 
 .o-container {
@@ -125,11 +125,26 @@ A basic bootstrap-esq grid system may have the following classes:
 	/* [2] */ 
 }
 
-@media (min-width: 925px) {
+@media (min-width: 740px) {
 	.o-col-4@md {
 		/* [3] */ 		
 	}
 }
+```
+
+Whilst a handy utility class may have the following class:
+
+```
+/*
+[1] Using the same principles of the previous example, this utility class would only activate once the 'lg' breakpoint has been reached. As this is a utility class, we use a 'u' prefix.
+*/
+
+@media (min-width: 925px) {
+	.u-hide@lg {
+		/* [1] */
+	}
+}
+
 ```
 
 
