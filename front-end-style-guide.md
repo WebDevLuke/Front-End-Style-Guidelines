@@ -22,7 +22,7 @@ A project's directory structure is built around the use of a build tool such as 
 
 ### Structure
 
-How CSS is structured during those first days of a front-end build has a direct impact on its maintainability and scalability, so it's important that we structure our CSS in such a way that developers 6 months down the line can quickly jump on board and start being productive straight away.
+How your component-driven CSS is structured during those first days of a front-end build has a direct impact on its maintainability and scalability, so it's important that we structure our CSS in such a way that developers 6 months down the line can quickly jump on board and start being productive straight away.
 
 We're going to be using an ever so slightly tweaked version of a CSS methodology called ITCSS (Inverted Triangle CSS). Quoting a [post](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/) on the subject:
 
@@ -83,7 +83,7 @@ Within each layer, new CSS should be seperated into mutiple files according to i
 
 ### Naming
 
-When it comes to naming our CSS classes, we're going to draw from various popular existing naming conventions. These are [BEM](http://getbem.com), [BEMIT](http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further), and [OOCSS](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces).
+When it comes to naming our CSS classes, we're going to draw from various popular existing naming conventions. These are [BEM](http://getbem.com), [BEMIT](http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further), [OOCSS](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces), and a little from [SMACSS](https://smacss.com/).
 
 A typical classname for a button component and some of its variants would therefore be the following.
 
@@ -93,6 +93,7 @@ A typical classname for a button component and some of its variants would theref
 [1] An example of a base class for a button. Since a button would belong on the component layer, we prefix it with a 'c'.
 [2] This would be an element class for the button component, hench the 2 underscores.
 [3] An example of a modifier for the button component. This is signified by the 2 dashs. 
+[4] An example of a stateful modifier. These are used when elements require style changes for changes of state (eg: hover, click etc).
 */
 
 .c-btn {
@@ -105,6 +106,10 @@ A typical classname for a button component and some of its variants would theref
 
 .c-btn--secondary {
 	/* [3] */ 
+}
+
+.c-btn.is-active {
+	/* [4] */ 	
 }
 ```
 
@@ -147,6 +152,7 @@ Whilst a handy utility class may have the following class:
 
 ```
 
+Using these naming coventions allows us to create classnames which share information regarding form, function and placement within the codebase. It also encourages consistancy and makes for a clean, DRY codebase.
 
 # Code Documentation
 
