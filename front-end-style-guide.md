@@ -20,7 +20,7 @@ A project's directory structure is built around the use of a build tool such as 
 
 # CSS
 
-#### Structure
+### Structure
 
 How CSS is structured during those first days of a front-end build has a direct impact on its maintainability and scalability, so it's important that we structure our CSS in such a way that developers 6 months down the line can quickly jump on board and start being productive straight away.
 
@@ -81,7 +81,7 @@ Within each layer, new CSS should be seperated into mutiple files according to i
 	- style.scss (Main SCSS file which pulls everything else in)
 ~~~~
 
-#### Naming
+### Naming
 
 # Further Reading
 
