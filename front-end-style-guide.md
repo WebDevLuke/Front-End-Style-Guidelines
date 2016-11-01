@@ -231,6 +231,8 @@ When nested in the footer component, add some positional tweaking.
 5. This is a modifier for the headings component as per BEM. This particular one adds more emphasis to yuor chosen heading.
 6. A nested modifier which adds positioning styles when your component is nested within the footer component.
 
+### Syntax
+
 
 # Further Reading
 
