@@ -1,10 +1,8 @@
 # Introduction
-This style guidelines proposes a high-level approach to front-end development which aims to make our front-end code consistent, easily readable and readily maintainable by multiple developers.
+This style guidelines proposes a high-level approach to front-end development which aims to make our front-end code consistent, easily readable and readily maintainable by multiple developers. Front-end build is moving towards componentised UIs, so instead of building page-based websites, we’ll be building design systems and UI Toolkits that come together to form the resulting pages.
 
 It is based upon my own experience working on large-scale development projects over the years and should be learned, understood, and implemented on new projects moving forwards. I want this to be a collaborative effort, so if deviations from this document can be justified then I'm happy to filter those back into the guidelines.
 
-# Core Approach
-Front-end build is moving towards componentised UIs, so instead of building page-based websites, we’ll be building design systems and UI Toolkits that come together to form the resulting pages.
 
 # Global Structure
 
@@ -141,7 +139,7 @@ A basic bootstrap-esq grid system may have the following classes:
 }
 ```
 
-Whilst a handy utility class may have the following class:
+Whilst a handy utility class may have the following structure:
 
 ```
 /*
@@ -156,7 +154,7 @@ Whilst a handy utility class may have the following class:
 
 ```
 
-Using these naming coventions allows us to create classnames which share information regarding form, function and placement within the codebase. It also encourages consistancy and makes for a clean, DRY codebase.
+Using these naming coventions allows us to create classnames which share information regarding form, function and placement within the codebase. It also encourages consistancy and makes for clean, DRY stylesheets.
 
 # Code Documentation
 
