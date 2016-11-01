@@ -146,11 +146,9 @@ A basic bootstrap-esq grid system may have the following classes:
 
 Whilst a handy utility class may have the following structure:
 
-```
-/*
-[1] Using the same principles of the previous example, this utility class would only activate once the 'lg' breakpoint has been reached. As this is a utility class, we use a 'u' prefix.
-*/
+1. Using the same principles of the previous example, this utility class would only activate once the 'lg' breakpoint has been reached. As this is a utility class, we use a 'u' prefix.
 
+```
 @media (min-width: 925px) {
 	.u-hide@lg {
 		/* [1] */
