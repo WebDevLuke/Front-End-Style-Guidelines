@@ -175,26 +175,26 @@ Below is a typical example of a new CSS component with all the correct documenta
 [1] An example of a main heading. States what the topic of the file is, which in this case would be a headings component.
 [2] Write a short sentence explaining the element and any theory behind your decision if applicable.
 [3] I like to link to articles which may have inspired this thinking.
-[4] An example of a subheader. In this case creating the base for the headings component.
+[4] An example of a subheader. In this case creating the base for the headings component. It's important to include the HTML code for the component otherwise the next developer won't know how everything fits together.
 [5] This is a modifier for the headings component as per BEM. This particular one adds more emphasis to yuor chosen heading.
-[6] A stateful modifier which adds positioning styles when your component is nested within another.
+[6] A nested modifier which adds positioning styles when your component is nested within the footer component.
 */
 
 
-//--------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------
 // HEADINGS [1]
-//--------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------
 
 /*
 A component to cover headings. As opposed to styling headings directly, this approach avoids the trap of semantically requiring a
-specific header and then having to override styles because cosmetics aren't appropriate. [2]
+specific header and then having to override styles because cosmetics aren't appropriate. Use with heading elements from h1 onwards. [2]
 
 http://csswizardry.com/2016/02/managing-typography-on-large-apps [3]
 */
 
 
 // BASE & ELEMENTS [4]
-//--------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------
 
 /*
 <h1 class="c-heading">CONTENT</h1>
@@ -207,16 +207,14 @@ http://csswizardry.com/2016/02/managing-typography-on-large-apps [3]
 
 
 // EMPHASIS MODIFIER [5]
-//--------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------
 
 /*
 A modifier which places more emphasis on the heading.
 */
 
 /*
-<a href="/" class="c-heading c-heading--emphasis">
-	CONTENT
-</a>
+<h2 class="c-heading c-heading--emphasis">CONTENT</h2>
 */
 
 .c-heading--emphasis {
@@ -226,7 +224,7 @@ A modifier which places more emphasis on the heading.
 
 
 // FOOTER NESTED MODIFIER [6]
-//--------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------
 
 /*
 When nested in the footer component, add some positional tweaking.
