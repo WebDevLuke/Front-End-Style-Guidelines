@@ -22,9 +22,9 @@ A project's directory structure is built around the use of a build tool such as 
 
 ### Structure
 
-How your component-driven CSS is structured during those first days of a front-end build has a direct impact on its maintainability and scalability, so it's important that we structure our CSS in such a way that developers 6 months down the line can quickly jump on board and start being productive straight away.
+How your CSS is structured during those first days of a front-end build has a direct impact on its maintainability and scalability, so it's important that we structure our CSS in such a way that developers 6 months down the line can quickly jump on board and start being productive straight away.
 
-We're going to be using an ever so slightly tweaked version of a CSS methodology called ITCSS (Inverted Triangle CSS). Quoting a [post](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/) on the subject:
+We're going to be using a CSS methodology called ITCSS (Inverted Triangle CSS). Quoting a [post](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/) on the subject:
 
 > ITCSS helps you to organize your project CSS files in such way that you can better deal with (not always easy-to-deal with) CSS specifics like global namespace, cascade and selectors specificity.
 
