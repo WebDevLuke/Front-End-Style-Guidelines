@@ -3,7 +3,11 @@ This style guidelines proposes a high-level approach to front-end development wh
 
 It is based upon my own experience working on large-scale development projects over the years and should be learned, understood, and implemented on new projects moving forwards. I want this to be a collaborative effort, so if deviations from this document can be justified then I'm happy to filter those back into the guidelines.
 
-# Global Directory Structure
+# Core Approach
+Front-end build is moving towards componentised UIs, so instead of building page-based websites, we’ll be building design systems and UI Toolkits that come together to form the resulting pages.
+
+# Global Structure
+
 A project's directory structure is built around the use of a build tool such as [Gulp](http://gulpjs.com/). `dev` contains sources files whilst `dist` contains the compiled.
 
 ~~~~
@@ -20,9 +24,9 @@ A project's directory structure is built around the use of a build tool such as 
 
 # CSS
 
-### Structure
-
 How your CSS is structured during those first days of a front-end build has a direct impact on its maintainability and scalability, so it's important that we structure our CSS in such a way that developers 6 months down the line can quickly jump on board and start being productive straight away.
+
+### Structure
 
 We're going to be using a CSS methodology called ITCSS (Inverted Triangle CSS). Quoting a [post](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/) on the subject:
 
