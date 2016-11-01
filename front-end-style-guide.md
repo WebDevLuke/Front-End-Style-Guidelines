@@ -214,7 +214,7 @@ A modifier which places more emphasis on the heading.
 */
 
 /*
-<h2 class="c-heading c-heading--emphasis">CONTENT</h2>
+<h1 class="c-heading c-heading--emphasis">CONTENT</h1>
 */
 
 .c-heading--emphasis {
@@ -231,9 +231,7 @@ When nested in the footer component, add some positional tweaking.
 */
 
 /*
-<a href="/" class="c-heading c-heading--emphasis in-footer">
-	CONTENT
-</a>
+<h1 class="c-heading c-heading--emphasis in-footer">CONTENT</h1>
 */
 
 .in-footer.c-heading {
