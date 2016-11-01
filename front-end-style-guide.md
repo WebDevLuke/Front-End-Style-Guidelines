@@ -89,19 +89,17 @@ When it comes to naming our CSS classes, we're going to draw from various popula
 
 A typical classname for a button component and some of its variants would therefore be the following.
 
-
-```
-/*
-[1] An example of a base class for a button. Since a button would belong on the component layer, we prefix it with a 'c'.
-[2] This would be an element class for the button component, hench the 2 underscores.
-[3] An example of a modifier for the button component. This is signified by the 2 dashs. 
-[4] An example of a stateful modifier. These are used when elements require style changes for changes of state (eg: hover, click etc).
-[5] An example of a nested modifier. If a component needs to be positioned when nested within another component, create one of these to
+1. An example of a base class for a button. Since a button would belong on the component layer, we prefix it with a 'c'.
+2. This would be an element class for the button component, hench the 2 underscores.
+3. An example of a modifier for the button component. This is signified by the 2 dashs. 
+4. An example of a stateful modifier. These are used when elements require style changes for changes of state (eg: hover, click etc).
+5. An example of a nested modifier. If a component needs to be positioned when nested within another component, create one of these to
 declare that behavour. These nested modifiers should only affect positioning (floats, positions etc) and should not affect the cosmetics
 of the component, which is the job of the regular modifier. The use of stateful modifiers rather than simple nesting is preferred as it doesn't change the 
 original component and violate the open/closed principle. It also leads to more readable HTML.
-*/
 
+
+```
 .c-btn {
 	/* [1] */ 
 }
@@ -126,13 +124,11 @@ original component and violate the open/closed principle. It also leads to more 
 
 A basic bootstrap-esq grid system may have the following classes:
 
-```
-/*
-[1] A simple container object pattern, so therefore we prefix this with an 'o'.
-[2] A typical column class.
-[3] A responsive column using the BEMIT naming convention. The '@md' refers to the breakpoint which this styles would become active.
-*/
+1. A simple container object pattern, so therefore we prefix this with an 'o'.
+2. A typical column class.
+3. A responsive column using the BEMIT naming convention. The '@md' refers to the breakpoint which this styles would become active.
 
+```
 .o-container {
 	/* [1] */ 	
 }
@@ -170,16 +166,14 @@ Documenting our CSS where appropriate can be very helpful in making sure subsequ
 
 Below is a typical example of a new CSS component with all the correct documentation:
 
-```
-/*
-[1] An example of a main heading. States what the topic of the file is, which in this case would be a headings component.
-[2] Write a short sentence explaining the element and any theory behind your decision if applicable.
-[3] I like to link to articles which may have inspired this thinking.
-[4] An example of a subheader. In this case creating the base for the headings component. It's important to include the HTML code for the component otherwise the next developer won't know how everything fits together.
-[5] This is a modifier for the headings component as per BEM. This particular one adds more emphasis to yuor chosen heading.
-[6] A nested modifier which adds positioning styles when your component is nested within the footer component.
-*/
+1. An example of a main heading. States what the topic of the file is, which in this case would be a headings component.
+2. Write a short sentence explaining the element and any theory behind your decision if applicable.
+3. I like to link to articles which may have inspired this thinking.
+4. An example of a subheader. In this case creating the base for the headings component. It's important to include the HTML code for the component otherwise the next developer won't know how everything fits together.
+5. This is a modifier for the headings component as per BEM. This particular one adds more emphasis to yuor chosen heading.
+6. A nested modifier which adds positioning styles when your component is nested within the footer component.
 
+```
 
 //----------------------------------------------------------------------------------------
 // HEADINGS [1]
