@@ -1,7 +1,7 @@
 # Introduction
-This style guidelines proposes a high-level approach to front-end development which aims to make our front-end code consistent, easily readable and readily maintainable by multiple developers. Front-end build is moving towards componentised UIs, so instead of building page-based websites, we’ll be building design systems and UI Toolkits that come together to form the resulting pages.
+This style guidelines proposes a high-level approach to front-end development which aims to make our front-end code consistent, easily readable and readily maintainable by multiple developers. This approach is centered around a move towards componentised UIs, so instead of building page-based websites, we’ll be building design systems and UI Toolkits that come together to form the resulting pages.
 
-It is based upon my own experience working on large-scale development projects over the years and should be learned, understood, and implemented on new projects moving forwards. I want this to be a collaborative effort, so if deviations from this document can be justified then I'm happy to filter those back into the guidelines.
+These guidelines are based on my own experience working on large-scale development projects over the years and should be learned, understood, and implemented on new projects moving forwards. I want this to be a collaborative effort, so if deviations from this document can be justified then I'm happy to filter those back into the guidelines.
 
 
 # Global Structure
@@ -96,6 +96,10 @@ A typical classname for a button component and some of its variants would theref
 [2] This would be an element class for the button component, hench the 2 underscores.
 [3] An example of a modifier for the button component. This is signified by the 2 dashs. 
 [4] An example of a stateful modifier. These are used when elements require style changes for changes of state (eg: hover, click etc).
+[5] An example of a nested modifier. If a component needs to be positioned when nested within another component, create one of these to
+declare that behavour. These nested modifiers should only affect positioning (floats, positions etc) and should not affect the cosmetics
+of the component, which is the job of the regular modifier. The use of stateful modifiers rather than simple nesting is preferred as it doesn't change the 
+original component and violate the open/closed principle. It also leads to more readable HTML.
 */
 
 .c-btn {
@@ -113,6 +117,11 @@ A typical classname for a button component and some of its variants would theref
 .c-btn.is-active {
 	/* [4] */ 	
 }
+
+.in-nav.c-btn {
+	/* [5] */ 		
+}
+
 ```
 
 A basic bootstrap-esq grid system may have the following classes:
@@ -156,7 +165,86 @@ Whilst a handy utility class may have the following structure:
 
 Using these naming coventions allows us to create classnames which share information regarding form, function and placement within the codebase. It also encourages consistancy and makes for clean, DRY stylesheets.
 
-# Code Documentation
+### Documentation
+Documenting our CSS where appropriate can be very helpful in making sure subsequent developers understand your intent and can build upon what you've done without too much difficulty.
+
+Below is a typical example of a new CSS component with all the correct documentation:
+
+```
+/*
+[1] An example of a main heading. States what the topic of the file is, which in this case would be a headings component.
+[2] Write a short sentence explaining the element and any theory behind your decision if applicable.
+[3] I like to link to articles which may have inspired this thinking.
+[4] An example of a subheader. In this case creating the base for the headings component.
+[5] This is a modifier for the headings component as per BEM. This particular one adds more emphasis to yuor chosen heading.
+[6] A stateful modifier which adds positioning styles when your component is nested within another.
+*/
+
+
+//--------------------------------------------------------------------------------------------------------------------------------------
+// HEADINGS [1]
+//--------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+A component to cover headings. As opposed to styling headings directly, this approach avoids the trap of semantically requiring a
+specific header and then having to override styles because cosmetics aren't appropriate. [2]
+
+http://csswizardry.com/2016/02/managing-typography-on-large-apps [3]
+*/
+
+
+// BASE & ELEMENTS [4]
+//--------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+<h1 class="c-heading">CONTENT</h1>
+*/
+
+.c-heading {
+	font-size:72px;
+	line-height:normal;
+}
+
+
+// EMPHASIS MODIFIER [5]
+//--------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+A modifier which places more emphasis on the heading.
+*/
+
+/*
+<a href="/" class="c-heading c-heading--emphasis">
+	CONTENT
+</a>
+*/
+
+.c-heading--emphasis {
+	font-weight:bold;
+	text-decoration:underlines;
+}
+
+
+// FOOTER NESTED MODIFIER [6]
+//--------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+When nested in the footer component, add some positional tweaking.
+*/
+
+/*
+<a href="/" class="c-heading c-heading--emphasis in-footer">
+	CONTENT
+</a>
+*/
+
+.in-footer.c-heading {
+	left:-12px;
+	top:10px;
+	position:relative;
+}
+```
+
 
 
 
