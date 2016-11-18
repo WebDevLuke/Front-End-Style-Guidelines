@@ -85,7 +85,7 @@ Within each layer, new CSS should be seperated into mutiple files according to i
 
 ### Naming
 
-When it comes to naming our CSS classes, we're going to draw from various popular existing naming conventions. These are [BEM](http://getbem.com), [BEMIT](http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further), [OOCSS](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces), and a little from [SMACSS](https://smacss.com/).
+Good classnames aim to provide ample information surrounding their function and place within the structure of the stylesheet. When it comes to naming our CSS classes, we're going to draw from various popular existing naming conventions. For reference, these are [BEM](http://getbem.com), [BEMIT](http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further), [OOCSS](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces), and a little from [SMACSS](https://smacss.com/).
 
 A typical classname for a button component and some of its variants would therefore be the following.
 
@@ -107,13 +107,13 @@ A typical classname for a button component and some of its variants would theref
 	/* [4] */ 	
 }
 
-.in-nav.c-btn {
+.c-btn.in-nav {
 	/* [5] */ 		
 }
 ```
 
-1. An example of a base class for a button. Since a button would belong on the component layer, we prefix it with a 'c'.
-2. This would be an element class for the button component, hench the 2 underscores.
+1. An example of a block level class for a button. Since a button would belong on the component layer, we prefix it with a 'c'.
+2. This would be an element level class for the button component, hench the 2 underscores.
 3. An example of a modifier for the button component. This is signified by the 2 dashs. 
 4. An example of a stateful modifier. These are used when elements require style changes for changes of state (eg: hover, click etc).
 5. An example of a nested modifier. If a component needs to be positioned when nested within another component, create one of these to
@@ -176,7 +176,7 @@ http://csswizardry.com/2016/02/managing-typography-on-large-apps [3]
 */
 
 
-// BASE & ELEMENTS [4]
+// BLOCK & ELEMENTS [4]
 //----------------------------------------------------------------------------------------
 
 /*
@@ -227,13 +227,33 @@ When nested in the footer component, add some positional tweaking.
 1. An example of a main heading. States what the topic of the file is, which in this case would be a headings component.
 2. Write a short sentence explaining the element and any theory behind your decision if applicable.
 3. I like to link to articles which may have inspired this thinking.
-4. An example of a subheader. In this case creating the base for the headings component. It's important to include the HTML code for the component otherwise the next developer won't know how everything fits together.
-5. This is a modifier for the headings component as per BEM. This particular one adds more emphasis to yuor chosen heading.
+4. An example of a subheader. In this case creating the block for the headings component. It's important to include the HTML code for the component otherwise the next developer won't know how its structured.
+5. This is a modifier for the headings component as per BEM. This particular one adds more emphasis to your chosen heading.
 6. A nested modifier which adds positioning styles when your component is nested within the footer component.
 
-### Syntax
 
+### CSS Do's & Don'ts
+
+#### Do -
+- Try to comment in your code as much as possible about your intent, usage info etc. This is a big help to any other dev trying to make sense of your code.
+- Look for where you can incorporate any existing ITCSS objects into any components you are building. This can make your stylesheet more DRY.
+- Stay consistant with existing indentation practices. You don't want a codebase split between space and tab indentation. Personally I prefer tabs.
+- Consider that if you took your ITCSS component out of its current context and placed it somewhere else on the page, it should still look and work as intended. 
+
+
+#### Don't -
+- In sass use @extend as it can [create more problems than it solves](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/).
+- Use ID's as styling hooks as they are specificity heavyweights and override the organic specificity of your ITCSS which you've built up.
+- Use !important in any place other than the "utilities" ITCSS layer as it overrides specificity. If are experiencing specificity problems consider revising your architecture rather than the rocket launcher that is !important.
 
 # Further Reading
+Below I've compiled some useful links:
 
-WIP
+### [Orion Framework](https://github.com/WebDevLuke/Orion-Framework)
+This is a CSS framework that I've developed originally to use as a boilerplate and later as a test bed for new ideas and functionality. It implements everything discussed in this guide and would make a logical easy start point for new front-end projects.
+
+### [CSS Wizardry](http://csswizardry.com)
+A good resource for discussion into relevant CSS methodology.
+
+### [CSS Guidelines](http://cssguidelin.es/)
+An indepth CSS guidelines which compliments this document rather well.
