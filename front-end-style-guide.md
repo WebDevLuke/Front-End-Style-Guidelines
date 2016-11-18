@@ -20,6 +20,52 @@ A project's directory structure is built around the use of a build tool such as 
 	- etc.html
 ~~~~
 
+# HTML
+
+Below I've included a very basic boilerplate starting page for a HTML document.
+
+###
+
+~~~~
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Meta Stuff -->
+<meta charset="UTF-8" />
+
+<!-- Responsive Stuff -->
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
+
+<!--Standard Stuff-->
+<title>Test</title>
+
+<!-- Meta Tags -->
+<meta name="description" content="Luke Harrison is a Sheffield-based Web Designer &amp; Front-End Developer who has a passion for designing beautiful, functional websites."/>
+<link rel="canonical" href="http://www.lukeharrison.net/" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Luke Harrison - Sheffield Web Designer and Front-End Developer" />
+<meta property="og:description" content="Luke Harrison is a Sheffield-based Web Designer &amp; Front-End Developer who has a passion for designing beautiful, functional websites." />
+<meta property="og:url" content="http://www.lukeharrison.net" />
+<meta property="og:site_name" content="Luke Harrison" />
+<meta property="og:image" content="http://www.lukeharrison.net/logo_share.png" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@WebDevLuke"/>
+<meta name="twitter:domain" content="Luke Harrison"/>
+<meta name="twitter:creator" content="@WebDevLuke"/>
+
+<!--CSS-->
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+<body>
+
+<script src="js/sample-component.js"></script>
+</body>
+</html>
+~~~~
+
 # CSS
 
 How your CSS is structured during those first days of a front-end build has a direct impact on its maintainability and scalability, so it's important that we structure our CSS in such a way that developers 6 months down the line can quickly jump on board and start being productive straight away.
@@ -246,11 +292,14 @@ When nested in the footer component, add some positional tweaking.
 - Use ID's as styling hooks as they are specificity heavyweights and override the organic specificity of your ITCSS which you've built up.
 - Use !important in any place other than the "utilities" ITCSS layer as it overrides specificity. If are experiencing specificity problems consider revising your architecture rather than the rocket launcher that is !important.
 
+
+# Optimisation
+
 # Further Reading
 Below I've compiled some useful links:
 
 ### [Orion Framework](https://github.com/WebDevLuke/Orion-Framework)
-This is a CSS framework that I've developed originally to use as a boilerplate and later as a test bed for new ideas and functionality. It implements everything discussed in this guide and would make a logical easy start point for new front-end projects.
+This is a lightweight front-end framework that I developed originally to use as a boilerplate and later as a test bed for new ideas and functionality. It implements everything discussed in this guide and would make a logical easy start point for new front-end projects.
 
 ### [CSS Wizardry](http://csswizardry.com)
 A good resource for discussion into relevant CSS methodology.
