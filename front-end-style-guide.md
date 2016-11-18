@@ -298,11 +298,11 @@ When nested in the footer component, add some positional tweaking.
 # Further Reading
 Below I've compiled some useful links:
 
-### [Orion Framework](https://github.com/WebDevLuke/Orion-Framework)
-This is a lightweight front-end framework that I developed originally to use as a boilerplate and later as a test bed for new ideas and functionality. It implements everything discussed in this guide and would make a logical easy start point for new front-end projects.
+### Orion [Orion Framework](https://github.com/WebDevLuke/Orion-Framework)
+This is a lightweight front-end framework that I developed originally to use as a boilerplate and later as a test bed for new ideas and functionality. It implements everything discussed in this guide and would make a logical easy start point for new front-end projects. [Link](https://github.com/WebDevLuke/Orion-Framework)
 
 ### [CSS Wizardry](http://csswizardry.com)
-A good resource for discussion into relevant CSS methodology.
+A good resource for discussion into relevant CSS methodology. [Link](http://csswizardry.com)
 
 ### [CSS Guidelines](http://cssguidelin.es/)
-An indepth CSS guidelines which compliments this document rather well.
+An indepth CSS guidelines which compliments this document rather well. [Link](http://cssguidelin.es/)
