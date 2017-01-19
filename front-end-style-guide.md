@@ -3,10 +3,13 @@ This style guidelines proposes a high-level approach to front-end development wh
 
 These guidelines are based on my own experience working on large-scale development projects over the years and should be learned, understood, and implemented on new projects moving forwards. I want this to be a collaborative effort, so if deviations from this document can be justified then I'm happy to filter those back into the guidelines.
 
+### Orion Framework
+This is a lightweight front-end framework that I developed originally to use as a boilerplate and later as a test bed for new ideas and functionality. It implements everything discussed in this guide and would make a logical easy start point for your new front-end project. [Link](https://github.com/WebDevLuke/Orion-Framework)
+
 
 # Global Structure
 
-A project's directory structure is built around the use of a build tool such as [Gulp](http://gulpjs.com/). `dev` contains sources files whilst `dist` contains the compiled.
+A project's directory structure is built around the use of a build tool such as [Gulp](http://gulpjs.com/). `dev` contains sources files whilst `dist` contains the compiled. How files are organised and structured within these two folders can be largely left to the requirements of the project.
 
 ~~~~
 - dev
@@ -86,7 +89,7 @@ These layers in question are as follows:
 - Elements – styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we can redefine them here.
 - Objects – class-based selectors which define undecorated design patterns, for example media object known from OOCSS
 - Components – specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components
-- Utilities – helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
+- Utilities – helper classes with ability to override anything which goes before in the triangle. These should primarily be used for positional and minor cosmetic styling (eg bold, no-wrap, text-alignments etc). Every other kind of cosmetic styling should be done at the components layer.
 
 Therefore we structure our CSS directory in the following way, with each layer represented as a subfolder:
 
@@ -278,28 +281,29 @@ When nested in the footer component, add some positional tweaking.
 6. A nested modifier which adds positioning styles when your component is nested within the footer component.
 
 
-### CSS Do's & Don'ts
+### CSS Do's & Dont's
 
 #### Do -
 - Try to comment in your code as much as possible about your intent, usage info etc. This is a big help to any other dev trying to make sense of your code.
 - Look for where you can incorporate any existing ITCSS objects into any components you are building. This can make your stylesheet more DRY.
-- Stay consistant with existing indentation practices. You don't want a codebase split between space and tab indentation. Personally I prefer tabs.
-- Consider that if you took your ITCSS component out of its current context and placed it somewhere else on the page, it should still look and work as intended. 
+- Stay consistant with existing indentation practices. You don't want a codebase split between space and tab indentation. Personally I prefer tabs, but whatever works best for you.
+- Consider that if you took your ITCSS component out of its current context and placed it somewhere else on the page, it should still look and work the same. Components should be ignorant of context. If you need to reposition a component when nested within another, use nested stateful modifiers (c-mycomponent.in-another-component).
+- In your component css files include the basic component markup in a comment so the next developer has a basic idea of how everything fits together.
 
 
 #### Don't -
 - In sass use @extend as it can [create more problems than it solves](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/).
 - Use ID's as styling hooks as they are specificity heavyweights and override the organic specificity of your ITCSS which you've built up.
 - Use !important in any place other than the "utilities" ITCSS layer as it overrides specificity. If are experiencing specificity problems consider revising your architecture rather than the rocket launcher that is !important.
+- Use utility classes for anything other than positional and/or minor cosmetic styling. The temptation is to have a utility class for every css property but that leads to a messy and bloated .html file. Cosmetic styling is the job of the components layer.
 
 
-# Optimisation
 
 # Further Reading
 Below I've compiled some useful links:
 
 ### Orion [Orion Framework](https://github.com/WebDevLuke/Orion-Framework)
-This is a lightweight front-end framework that I developed originally to use as a boilerplate and later as a test bed for new ideas and functionality. It implements everything discussed in this guide and would make a logical easy start point for new front-end projects. [Link](https://github.com/WebDevLuke/Orion-Framework)
+This is a lightweight front-end framework that I developed originally to use as a boilerplate and later as a test bed for new ideas and functionality. It implements everything discussed in this guide and would make a logical easy start point for your new front-end project. [Link](https://github.com/WebDevLuke/Orion-Framework)
 
 ### [CSS Wizardry](http://csswizardry.com)
 A good resource for discussion into relevant CSS methodology. [Link](http://csswizardry.com)
