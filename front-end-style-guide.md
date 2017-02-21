@@ -3,6 +3,8 @@ This style guidelines proposes a high-level approach to front-end development wh
 
 These guidelines are based on my own experience working on large-scale development projects over the years and should be learned, understood, and implemented on new projects moving forwards. I want this to be a collaborative effort, so if deviations from this document can be justified then I'm happy to filter those back into the guidelines.
 
+I would also recommend reading [Sky's CSS Guidelines](https://github.com/sky-uk/css) as they share largely the same way of working as what I'm going to be outlining.
+
 ### Orion Framework
 This is a lightweight front-end framework that I developed originally to use as a boilerplate and later as a test bed for new ideas and functionality. It implements everything discussed in this guide and would make a logical easy start point for your new front-end project. [Link](https://github.com/WebDevLuke/Orion-Framework)
 
@@ -34,37 +36,31 @@ Below I've included a very basic boilerplate starting page for a HTML document.
 <html lang="en">
 <head>
 
-<!-- Meta Stuff -->
+<!--Meta Stuff-->
 <meta charset="UTF-8" />
 
-<!-- Responsive Stuff -->
+<!--Responsive Viewport-->
 <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
 
-<!--Standard Stuff-->
-<title>Test</title>
+<!--Page Title-->
+<title>TITLE GOES HERE</title>
 
-<!-- Meta Tags -->
-<meta name="description" content="Luke Harrison is a Sheffield-based Web Designer &amp; Front-End Developer who has a passion for designing beautiful, functional websites."/>
-<link rel="canonical" href="http://www.lukeharrison.net/" />
-<meta property="og:locale" content="en_GB" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Luke Harrison - Sheffield Web Designer and Front-End Developer" />
-<meta property="og:description" content="Luke Harrison is a Sheffield-based Web Designer &amp; Front-End Developer who has a passion for designing beautiful, functional websites." />
-<meta property="og:url" content="http://www.lukeharrison.net" />
-<meta property="og:site_name" content="Luke Harrison" />
-<meta property="og:image" content="http://www.lukeharrison.net/logo_share.png" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:site" content="@WebDevLuke"/>
-<meta name="twitter:domain" content="Luke Harrison"/>
-<meta name="twitter:creator" content="@WebDevLuke"/>
+<!--Meta Tags-->
+<meta name="description" content="DESCRIPTION GOES HERE"/>
+<link rel="canonical" href="URL GOES HERE" />
 
 <!--CSS-->
-<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/style.min.css" />
 
 </head>
 <body>
 
-<script src="js/sample-component.js"></script>
+<!--SVG icon system master file. Visually hide but show for screen readers-->
+<div class="u-hidden-visually">
+	<!-- inject:svg --><!-- endinject -->
+</div>
+
+<script src="js/global.min.js"></script>
 </body>
 </html>
 ~~~~
@@ -253,24 +249,6 @@ A modifier which places more emphasis on the heading.
 	font-weight:bold;
 	text-decoration:underlines;
 }
-
-
-// FOOTER NESTED MODIFIER [6]
-//----------------------------------------------------------------------------------------
-
-/*
-When nested in the footer component, add some positional tweaking.
-*/
-
-/*
-<h1 class="c-heading c-heading--emphasis in-footer">CONTENT</h1>
-*/
-
-.in-footer.c-heading {
-	left:-12px;
-	top:10px;
-	position:relative;
-}
 ```
 
 1. An example of a main heading. States what the topic of the file is, which in this case would be a headings component.
@@ -278,7 +256,6 @@ When nested in the footer component, add some positional tweaking.
 3. I like to link to articles which may have inspired this thinking.
 4. An example of a subheader. In this case creating the block for the headings component. It's important to include the HTML code for the component otherwise the next developer won't know how its structured.
 5. This is a modifier for the headings component as per BEM. This particular one adds more emphasis to your chosen heading.
-6. A nested modifier which adds positioning styles when your component is nested within the footer component.
 
 
 ### CSS Do's & Dont's
@@ -310,3 +287,10 @@ A good resource for discussion into relevant CSS methodology. [Link](http://cssw
 
 ### [CSS Guidelines](http://cssguidelin.es/)
 An indepth CSS guidelines which compliments this document rather well. [Link](http://cssguidelin.es/)
+
+
+### [CSS Guidelines](http://cssguidelin.es/)
+An indepth CSS guidelines which compliments this document rather well. [Link](http://cssguidelin.es/)
+
+### [Sky's CSS Guidelines](https://github.com/sky-uk/css)
+Essentially a better written version of this document. [Link](https://github.com/sky-uk/css)
