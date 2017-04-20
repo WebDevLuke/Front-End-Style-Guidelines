@@ -152,7 +152,7 @@ A typical classname for a button component and some of its variants would theref
 	/* [4] */ 	
 }
 
-.c-btn.in-nav {
+.c-btn__icon {
 	/* [5] */ 		
 }
 ```
@@ -161,10 +161,7 @@ A typical classname for a button component and some of its variants would theref
 2. This would be an element level class for the button component, hench the 2 underscores.
 3. An example of a modifier for the button component. This is signified by the 2 dashs. 
 4. An example of a stateful modifier. These are used when elements require style changes for changes of state (eg: hover, click etc).
-5. An example of a nested modifier. If a component needs to be positioned when nested within another component, create one of these to
-declare that behavour. These nested modifiers should only affect positioning (floats, positions etc) and should not affect the cosmetics
-of the component, which is the job of the regular modifier. The use of stateful modifiers rather than simple nesting is preferred as it doesn't change the 
-original component and violate the open/closed principle. It also leads to more readable HTML.
+5. An example of a [BEM Mix](https://en.bem.info/forum/4/). If you need to nest one component within another and apply new styles, rather than violating the open/closed principle on the original component, we would create a new element for the parent component to apply the new styles. In this instance `c-btn__icon` would be introducing new styles to a `c-icon` component when it is nested in `c-btn`.
 
 A basic bootstrap-esq grid system may have the following classes:
 
@@ -275,19 +272,18 @@ A modifier which places more emphasis on the heading.
 - Use utility classes for anything other than positional and/or minor cosmetic styling. The temptation is to have a utility class for every css property but that leads to a messy and bloated .html file. Cosmetic styling is the job of the components layer.
 
 
-
 # Further Reading
 Below I've compiled some useful links:
 
-### Orion [Orion Framework](https://github.com/WebDevLuke/Orion-Framework)
-This is a lightweight front-end framework that I developed originally to use as a boilerplate and later as a test bed for new ideas and functionality. It implements everything discussed in this guide and would make a logical easy start point for your new front-end project. [Link](https://github.com/WebDevLuke/Orion-Framework)
+### [Orion Suite](https://github.com/WebDevLuke)
+This is a collection of front-end frameworks that I developed originally to use as a boilerplate and later as a test bed for new ideas and functionality. It implements everything discussed in this guide and would make a logical easy start point for your new front-end project.
+
+- [OrionCSS](https://github.com/WebDevLuke/OrionCSS) - OrionCSS is a SASS framework which is simple, easy to use and scalable. It provides you with a solid OOCSS foundation on which to build your project.
+- [OrionJS](https://github.com/WebDevLuke/OrionJS) - OrionJS is a simple collection of reusable functions to help streamline DOM manipulation in UI development.
+- [OrionBP](https://github.com/WebDevLuke/OrionBP) - OrionBP is a simple front-end boilerplate for projects using OrionCSS and OrionJS. It includes a suite of useful Gulp tasks allowing you to compile, compress and concatenate your SASS, JS and image assets.
 
 ### [CSS Wizardry](http://csswizardry.com)
 A good resource for discussion into relevant CSS methodology. [Link](http://csswizardry.com)
-
-### [CSS Guidelines](http://cssguidelin.es/)
-An indepth CSS guidelines which compliments this document rather well. [Link](http://cssguidelin.es/)
-
 
 ### [CSS Guidelines](http://cssguidelin.es/)
 An indepth CSS guidelines which compliments this document rather well. [Link](http://cssguidelin.es/)
