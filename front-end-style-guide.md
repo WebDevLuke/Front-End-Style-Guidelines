@@ -5,9 +5,12 @@ These guidelines are based on my own experience working on large-scale developme
 
 I would also recommend reading [Sky's CSS Guidelines](https://github.com/sky-uk/css) as they share largely the same way of working as what I'm going to be outlining.
 
-### Orion Framework
-This is a lightweight front-end framework that I developed originally to use as a boilerplate and later as a test bed for new ideas and functionality. It implements everything discussed in this guide and would make a logical easy start point for your new front-end project. [Link](https://github.com/WebDevLuke/Orion-Framework)
+### [Orion Suite](https://github.com/WebDevLuke)
+This is a collection of front-end frameworks that I developed originally to use as a boilerplate and later as a test bed for new ideas and functionality. It implements everything discussed in this guide and shoud be the start point for your new front-end project.
 
+- [OrionCSS](https://github.com/WebDevLuke/OrionCSS) - OrionCSS is a SASS framework which is simple, easy to use and scalable. It provides you with a solid OOCSS foundation on which to build your project.
+- [OrionJS](https://github.com/WebDevLuke/OrionJS) - OrionJS is a simple collection of reusable functions to help streamline DOM manipulation in UI development.
+- [OrionBP](https://github.com/WebDevLuke/OrionBP) - OrionBP is a simple front-end boilerplate for projects using OrionCSS and OrionJS. It includes a suite of useful Gulp tasks allowing you to compile, compress and concatenate your SASS, JS and image assets.
 
 # Global Structure
 
@@ -274,13 +277,6 @@ A modifier which places more emphasis on the heading.
 
 # Further Reading
 Below I've compiled some useful links:
-
-### [Orion Suite](https://github.com/WebDevLuke)
-This is a collection of front-end frameworks that I developed originally to use as a boilerplate and later as a test bed for new ideas and functionality. It implements everything discussed in this guide and would make a logical easy start point for your new front-end project.
-
-- [OrionCSS](https://github.com/WebDevLuke/OrionCSS) - OrionCSS is a SASS framework which is simple, easy to use and scalable. It provides you with a solid OOCSS foundation on which to build your project.
-- [OrionJS](https://github.com/WebDevLuke/OrionJS) - OrionJS is a simple collection of reusable functions to help streamline DOM manipulation in UI development.
-- [OrionBP](https://github.com/WebDevLuke/OrionBP) - OrionBP is a simple front-end boilerplate for projects using OrionCSS and OrionJS. It includes a suite of useful Gulp tasks allowing you to compile, compress and concatenate your SASS, JS and image assets.
 
 ### [CSS Wizardry](http://csswizardry.com)
 A good resource for discussion into relevant CSS methodology. [Link](http://csswizardry.com)
