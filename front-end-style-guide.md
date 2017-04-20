@@ -5,7 +5,7 @@ These guidelines are based on my own experience working on large-scale developme
 
 I would also recommend reading [Sky's CSS Guidelines](https://github.com/sky-uk/css) as they share largely the same way of working as what I'm going to be outlining.
 
-### [Orion Suite](https://github.com/WebDevLuke)
+### Orion Suite
 This is a collection of front-end frameworks that I developed originally to use as a boilerplate and later as a test bed for new ideas and functionality. It implements everything discussed in this guide and shoud be the start point for your new front-end project.
 
 - [OrionCSS](https://github.com/WebDevLuke/OrionCSS) - OrionCSS is a SASS framework which is simple, easy to use and scalable. It provides you with a solid OOCSS foundation on which to build your project.
