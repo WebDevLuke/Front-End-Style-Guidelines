@@ -1,0 +1,19 @@
+{
+	"name": "front-end-style-guidelines",
+	"version": "1.0.0",
+	"description": "This style guidelines proposes a high-level approach to front-end development which aims to make our front-end code consistent, easily readable and readily maintainable by multiple developers.",
+	"main": "index.js",
+	"scripts": {
+		"dokuwiki": "pandoc front-end-style-guide.md -f markdown -t dokuwiki -s -o front-end-style-guide-dokuwiki.txt"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/WebDevLuke/Front-End-Style-Guidelines.git"
+	},
+	"author": "Luke Harrison",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/WebDevLuke/Front-End-Style-Guidelines/issues"
+	},
+	"homepage": "https://github.com/WebDevLuke/Front-End-Style-Guidelines#readme"
+}
