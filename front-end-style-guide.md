@@ -203,7 +203,7 @@ Whilst a handy utility class may have the following structure:
 Using these naming coventions allows us to create classnames which share information regarding form, function and placement within the codebase. It also encourages consistancy and makes for clean, DRY stylesheets.
 
 ### Documentation
-Documenting our CSS where appropriate can be very helpful in making sure subsequent developers understand your intent and can build upon what you've done without too much difficulty.
+Documenting our code where appropriate can be very helpful in making sure subsequent developers understand your intent and can build upon what you've done without too much difficulty.
 
 Below is a typical example of a new CSS component with all the correct documentation:
 
@@ -257,6 +257,31 @@ A modifier which places more emphasis on the heading.
 4. An example of a subheader. In this case creating the block for the headings component. It's important to include the HTML code for the component otherwise the next developer won't know how its structured.
 5. This is a modifier for the headings component as per BEM. This particular one adds more emphasis to your chosen heading.
 
+This can also extend to HTML, where we can use data-attributes to semantically label our UI components. For instance:
+
+```html
+<div class="o-box o-box--spacing-small u-margin-bottom-regular">
+	<ul class="o-list-bare">
+		<li><a href="/">Article</a></li>
+		<li><a href="/">Article</a></li>
+		<li><a href="/">Article</a></li>
+	</ul>
+</div>
+```
+
+In the above example, we can see a component which consists of a combination of object patterns and utility classes. There's nothing besides the content which gives a straightforward answer to it's purpose. 
+
+In the below example, we've added a `data-component` attribute. What this does is add additional developer-orentated context to this collection of patterns, allowing us to quicky discern that the block of code is responsibe for displaying recent articles. For more info about this approach, [click here](https://csswizardry.com/2014/03/naming-ui-components-in-oocss/).
+
+```html
+<div data-component="recent-articles" class="o-box o-box--spacing-small u-margin-bottom-regular">
+	<ul class="o-list-bare">
+		<li><a href="/">Article</a></li>
+		<li><a href="/">Article</a></li>
+		<li><a href="/">Article</a></li>
+	</ul>
+</div>
+```
 
 ### CSS Do's & Dont's
 
